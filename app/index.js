@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import World from './components/World.jsx';
 
 ReactDOM.render(
-  <h1>App running in {process.env.NODE_ENV} mode</h1>,
+  <World />,
   document.getElementById('app')
 );

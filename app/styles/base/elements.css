@@ -1,0 +1,28 @@
+html {
+  height: 100%;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.333em;
+  font-weight: 400;
+}
+
+a {
+  color: steelblue;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  border-bottom: 1px solid steelblue;
+  cursor: pointer;
+}

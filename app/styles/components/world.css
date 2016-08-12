@@ -1,0 +1,10 @@
+.World-card {
+  background: white;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 0 darkgrey;
+  padding: 0.8em 1em;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+}
