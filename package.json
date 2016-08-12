@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --inline --open",
+    "start": "NODE_ENV=development webpack-dev-server --inline",
     "build": "NODE_ENV=production webpack --config webpack.prod.config.js"
   },
   "repository": {
@@ -33,11 +33,11 @@
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.22.0",
     "json-loader": "^0.5.4",
+    "normalize.css": "^4.2.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
-    "tachyons": "^4.0.4",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   }
