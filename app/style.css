@@ -5,5 +5,5 @@
 @import 'styles/base/theme';
 @import 'styles/base/type';
 @import 'styles/base/layout';
-@import 'styles/base/media';
+@import 'styles/base/image';
 @import 'styles/components/card';

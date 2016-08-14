@@ -45,13 +45,13 @@
   font-size: 16px;
   padding-left: 10px;
   transition: 0.5s color;
-  &:hover {
-    color: color(white shade(20%));
-  }
-  &.active {
-    color: color(white shade(20%));
-  }
 }
+
+.nav__link:hover,
+.nav__link:active {
+  color: color(white shade(20%));
+}
+
 
 .nav__brand {
   @extend .nav__link;

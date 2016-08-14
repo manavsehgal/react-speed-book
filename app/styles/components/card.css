@@ -5,7 +5,7 @@
 }
 
 /* Box card */
-.card-box {
+.card--box {
   @extend .card;
   border: 1px solid lightgrey;
   border-radius: 1px;

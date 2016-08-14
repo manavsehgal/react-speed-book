@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const Card = (props) => {
-  const boxStyle = props.plain ? 'card' : 'card-box';
+  const boxStyle = props.plain ? 'card' : 'card--box';
   const cardStyle = props.className
     ? `${boxStyle} ${props.className}`
     : boxStyle;

@@ -41,7 +41,7 @@ export default class Home extends Component {
             </p>
           </Card>
         </section>
-        <section className="stripe default-back">
+        <section className="stripe back--default">
           <Card plain className="col--half text--center">
             <h1>Custom React Component</h1>
             <p className="subtext">
@@ -49,11 +49,11 @@ export default class Home extends Component {
               and ES6 classes.
             </p>
           </Card>
-          <Card className="col--one-third text--center white-back">
+          <Card className="col--one-third text--center back--white">
             <World />
           </Card>
         </section>
-        <section className="stripe--slim gray-back">
+        <section className="stripe--slim back--gray">
           <Card plain className="col--full text--center white">
           <p>
             Copyright (c) 2016, Manav Sehgal.

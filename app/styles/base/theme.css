@@ -1,16 +1,16 @@
-/* Light background palette. */
-.default-back { background-color: $default-light; }
-.primary-back { background-color: $primary-light; }
-.secondary-back { background-color: $secondary-light; }
-.danger-back { background-color: $danger-light; }
-.success-back { background-color: $success-light; }
-.warning-back { background-color: $warning-light; }
-.white-back { background-color: white; }
+/* Light background theme. */
+.back--default { background-color: $default-light; }
+.back--primary { background-color: $primary-light; }
+.back--secondary { background-color: $secondary-light; }
+.back--danger { background-color: $danger-light; }
+.back--success { background-color: $success-light; }
+.back--warning { background-color: $warning-light; }
+.back--white { background-color: white; }
 
-/*Dark background palette*/
-.gray-back { background-color: slategray; }
+/* Dark background theme */
+.back--gray { background-color: slategray; }
 
-/*Light text palette*/
+/* Light text theme */
 .default { color: $default-light; }
 .primary { color: $primary-light; }
 .secondary { color: $secondary-light; }

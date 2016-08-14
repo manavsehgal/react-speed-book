@@ -31,9 +31,11 @@ input {
   border: 1px solid color($default-light shade(10%));
   padding: 0.3em 0.5em;
   transition: background 0.5s;
-  &:focus {
-    outline: none;
-    text-decoration: none;
-    background: color(white shade(2%));
-  }
+}
+
+input:focus,
+input:hover {
+  outline: none;
+  text-decoration: none;
+  background: color(white shade(2%));
 }
