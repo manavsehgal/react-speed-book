@@ -1,5 +1,5 @@
 import React, { PropTypes, Component} from 'react';
-import Hello from './Hello.jsx';
+import Hello from './Hello';
 
 export default class World extends Component {
   static propTypes = {
@@ -38,7 +38,7 @@ export default class World extends Component {
       ? `${this.state.value} says ${this.state.currentGreeting}`
       : this.state.currentGreeting;
     return (
-      <div className="World-card">
+      <div>
         <Hello greet={renderGreeting} message="World!" />
         <h2>
           <a onClick={this.slangGreet}>Slang</a>

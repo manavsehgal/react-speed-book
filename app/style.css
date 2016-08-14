@@ -1,3 +1,9 @@
 @import 'normalize.css';
+@import 'styles/base/variables';
 @import 'styles/base/elements';
-@import 'styles/components/world';
+@import 'styles/base/util';
+@import 'styles/base/theme';
+@import 'styles/base/type';
+@import 'styles/base/layout';
+@import 'styles/base/media';
+@import 'styles/components/card';

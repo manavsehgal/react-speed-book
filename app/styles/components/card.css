@@ -1,0 +1,13 @@
+/* Plain card */
+.card {
+  padding: 1em;
+  margin: 0.25em;
+}
+
+/* Box card */
+.card-box {
+  @extend .card;
+  border: 1px solid lightgrey;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px lightgrey;
+}
