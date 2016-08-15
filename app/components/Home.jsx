@@ -4,6 +4,7 @@ import Card from './Card';
 import YouTube from './YouTube';
 import IconText from './IconText';
 import GitHub from './GitHub';
+import Workflow from './Workflow';
 
 export default class Home extends Component {
   render() {
@@ -45,6 +46,17 @@ export default class Home extends Component {
             </p>
           </Card>
         </section>
+        <section className="stripe back--default">
+          <Card plain className="col--half text--center">
+            <h1>Custom Workflow Component</h1>
+            <p className="subtext">
+              Navigate React development strategies.
+            </p>
+          </Card>
+          <Card className="col--one-third back--secondary">
+            <Workflow />
+          </Card>
+        </section>
         <section className="stripe">
           <Card className="col--quarter text--center back--default">
             <GitHub repo="angular/angular" />
@@ -61,7 +73,7 @@ export default class Home extends Component {
             <IconText className="primary" icon="globe" size="5x"
               text="Nine Component Creation Strategies" />
           </Card>
-          <Card className="col--one-fourth back--white">
+          <Card plain className="col--one-fourth">
             <h3>
               <IconText slim className="danger" icon="building"
                 text="Modular Architecture" />

@@ -1,0 +1,69 @@
+.workflow {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.workflow__scenario {
+  color: white;
+  background: $secondary;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: center;
+  padding: 2px;
+}
+
+.workflow__text {
+  color: $black;
+  font-size: 1em;
+  text-align: left;
+  padding: 5px;
+}
+
+.workflow__nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-size: 1.2em;
+  line-height: 30px;
+}
+
+.workflow__symbol {
+  background: $primary;
+  color: white;
+  flex: 1 33%;
+  order: 1;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 1s;
+}
+
+.workflow__symbol:hover {
+  background: color($primary tint(30%));
+}
+
+.workflow__steps {
+  color: black;
+  flex: 1 34%;
+  order: 2;
+  text-align: center;
+}
+
+.workflow__sequence {
+  background: $primary;
+  color: white;
+  flex: 1 33%;
+  order: 3;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background 1s;
+}
+
+.workflow__sequence:hover {
+  background: color($primary tint(30%));
+}
