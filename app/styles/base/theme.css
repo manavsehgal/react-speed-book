@@ -8,13 +8,22 @@
 .back--white { background-color: white; }
 
 /* Dark background theme */
-.back--gray { background-color: slategray; }
+.back--gray { background-color: $default; }
 
 /* Light text theme */
-.default { color: $default-light; }
-.primary { color: $primary-light; }
-.secondary { color: $secondary-light; }
-.danger { color: $danger-light; }
-.success { color: $success-light; }
-.warning { color: $warning-light; }
+.default-light { color: $default-light; }
+.primary-light { color: $primary-light; }
+.secondary-light { color: $secondary-light; }
+.danger-light { color: $danger-light; }
+.success-light { color: $success-light; }
+.warning-light { color: $warning-light; }
+.white-light { color: white; }
+
+/* Light text theme */
+.default { color: $default; }
+.primary { color: $primary; }
+.secondary { color: $secondary; }
+.danger { color: $danger; }
+.success { color: $success; }
+.warning { color: $warning; }
 .white { color: white; }
