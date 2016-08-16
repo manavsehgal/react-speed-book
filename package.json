@@ -38,6 +38,7 @@
     "html-minifier": "^3.0.2",
     "html-webpack-plugin": "^2.22.0",
     "json-loader": "^0.5.4",
+    "ms": "^0.7.1",
     "normalize.css": "^4.2.0",
     "postcss-easy-import": "^1.0.1",
     "postcss-loader": "^0.9.1",
