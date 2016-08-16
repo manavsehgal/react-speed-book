@@ -1,0 +1,41 @@
+.button {
+  transition: background-color 0.2s;
+  padding: 0.6em 1em;
+  border: 0;
+  border-radius: 2px;
+  margin: 3px;
+  cursor: pointer;
+  font-size: 0.8125em;
+  font-weight: normal;
+  line-height: normal;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.button:focus {
+  outline: none;
+  text-decoration:none;
+}
+
+.button--default { @mixin colorize-button $default; }
+.button--primary { @mixin colorize-button $primary; }
+.button--secondary { @mixin colorize-button $secondary; }
+.button--warning { @mixin colorize-button $warning; }
+.button--danger { @mixin colorize-button $danger; }
+.button--success { @mixin colorize-button $success; }
+
+.button--large {
+  padding: 0.8em 1.2em;
+  font-size: 1.2em;
+}
+
+.button--medium {
+  padding: .6em 1em;
+  font-size: 0.9em;
+}
+
+.button--small {
+  padding: 0.3em 0.7em;
+  font-size: 0.65em;
+}
