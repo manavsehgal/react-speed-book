@@ -1,5 +1,8 @@
 import React, { PropTypes, Component} from 'react';
 import Hello from './Hello';
+import Input from './Input';
+import InputLabel from './InputLabel';
+import InputField from './InputField';
 
 export default class World extends Component {
   static propTypes = {
@@ -45,11 +48,15 @@ export default class World extends Component {
           &nbsp;OR&nbsp;
           <a onClick={this.hindiGreet}>Hindi</a>
         </h2>
-        <input
-          type="text" value={this.state.value}
-          placeholder="Enter a name"
-          onChange={this.handleNameChange}
-        />
+        <Input>
+          <InputLabel label="Name" />
+          <InputField
+            type="text"
+            value={this.state.value}
+            placeholder="Enter a name"
+            onChange={this.handleNameChange}
+          />
+        </Input>
       </div>
     );
   }

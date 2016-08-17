@@ -21,7 +21,8 @@
   "homepage": "https://github.com/manavsehgal/react-speed-book#readme",
   "dependencies": {
     "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react-dom": "^15.3.0",
+    "rumble-charts": "^1.0.12"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
