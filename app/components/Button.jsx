@@ -2,7 +2,11 @@ import React from 'react';
 
 const Button = (props) => {
   const renderLabel = props.icon
-    ? <span><i className={`fa fa-${props.icon}`}></i> {props.label}</span>
+    ? <span>
+        <i className={`fa fa-${props.icon}`}></i>
+        &nbsp;
+        {props.label}
+      </span>
     : props.label;
 
   let renderClass = props.size
