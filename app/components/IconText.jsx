@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 
-const IconText = ({
-  icon, text, className,
-  size, rotate, flip,
-  inverse, slim }) => {
+const IconText = (props) => {
+  const {
+    icon, text, size, rotate,
+    flip, inverse, slim, ribbon,
+    active, ...rest } = props;
+
   let variation = '';
 
   variation += size ? ` fa-${size}` : '';
@@ -13,16 +15,37 @@ const IconText = ({
 
   const iconClass = `fa fa-${icon}${variation}`;
 
-  return (
-    slim
-    ? <div className={className}>
+  let renderIcon = null;
+
+  if (slim) {
+    renderIcon =
+      <div {...rest}>
         <i className={iconClass}></i> {text}
-      </div>
-    : <div className={className}>
+      </div>;
+  }
+
+  if (ribbon) {
+    renderIcon =
+      <div {...rest} className=
+        {`${props.className} ribbon__menu text--center`}>
+          <i className={iconClass}></i>
+          <p className={active
+              ? 'ribbon__text--active'
+              : 'ribbon__text'}>
+                {text}
+          </p>
+      </div>;
+  }
+
+  if (!slim && !ribbon) {
+    renderIcon =
+      <div {...rest}>
         <i className={iconClass}></i>
         <h1>{text}</h1>
-      </div>
-  );
+      </div>;
+  }
+
+  return (renderIcon);
 };
 
 IconText.propTypes = {
@@ -33,18 +56,18 @@ IconText.propTypes = {
   rotate: PropTypes.number,
   flip: PropTypes.oneOf(['horizontal', 'vertical', '']),
   inverse: PropTypes.bool,
-  slim: PropTypes.bool  // draw slim single-line InfoText
+  slim: PropTypes.bool,  // draw slim single-line InfoText
+  ribbon: PropTypes.bool
 };
 
 IconText.defaultProps = {
-  icon: '',
-  text: '',
   className: '',
   size: '',
   rotate: null,
   flip: '',
   inverse: false,
-  slim: false  // draw slim single-line InfoText
+  slim: false,
+  ribbon: false
 };
 
 

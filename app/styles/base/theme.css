@@ -27,3 +27,15 @@
 .success { color: $success; }
 .warning { color: $warning; }
 .white { color: white; }
+
+/* Subtle patterns */
+.pattern-agsquare { background-image: url("/img/patterns/agsquare.png"); }
+.pattern-tweed { background-image: url("/img/patterns/tweed.png"); }
+.pattern-p5 { background-image: url("/img/patterns/p5.png"); }
+.pattern-azsubtle { background-image: url("/img/patterns/az_subtle.png"); }
+.pattern-black-lozenge { background-image: url("/img/patterns/black_lozenge.png"); }
+.pattern-dark-fish-skin { background-image: url("/img/patterns/dark_fish_skin.png"); }
+.pattern-honey-subtle { background-image: url("/img/patterns/honey_im_subtle.png"); }
+.pattern-linedpaper { background-image: url("/img/patterns/linedpaper.png"); }
+.pattern-mochagrunge { background-image: url("/img/patterns/mochaGrunge.png"); }
+.pattern-grey-wash-wall { background-image: url("/img/patterns/grey_wash_wall.png"); }

@@ -26,34 +26,3 @@
 .col--two-thirds { flex: 0 0 66.6666%; }
 .col--three-quarters { flex: 0 0 75%; }
 .col--full { flex: 0 0 100%; }
-
-/* nav */
-.nav {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  list-style: none;
-  background: black;
-  margin: 0;
-  padding: 10px;
-}
-
-.nav__link {
-  text-decoration: none;
-  border-bottom: none !important;
-  color: white;
-  font-size: 16px;
-  padding-left: 10px;
-  transition: 0.5s color;
-}
-
-.nav__link:hover,
-.nav__link:active {
-  color: color(white shade(20%));
-}
-
-
-.nav__brand {
-  @extend .nav__link;
-  font-weight: bold;
-}

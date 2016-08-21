@@ -11,7 +11,9 @@
 
 @import 'styles/base/image';
 
-@import 'styles/components/input';
-@import 'styles/components/button';
+@import 'styles/components/nav';
+@import 'styles/components/ribbon';
 @import 'styles/components/card';
+@import 'styles/components/button';
+@import 'styles/components/input';
 @import 'styles/components/workflow';

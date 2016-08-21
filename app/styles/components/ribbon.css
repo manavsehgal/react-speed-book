@@ -1,0 +1,25 @@
+.ribbon {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: $default-light;
+  padding-top: 10px;
+}
+
+.ribbon__text {
+  font-size: 0.7em;
+}
+
+.ribbon__text--active {
+  @extend .ribbon__text;
+  text-decoration: underline;
+}
+
+.ribbon__menu {
+  transition: 0.5s opacity;
+}
+
+.ribbon__menu:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
