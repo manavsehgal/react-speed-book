@@ -24,6 +24,6 @@ Card.defaultProps = {
   children: null,
   onClick: null,
   plain: false
-}
+};
 
 export default Card;

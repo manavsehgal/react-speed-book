@@ -15,6 +15,7 @@
 
 .stripe--slim {
   @extend .stripe;
+
   padding: 10px 0;
 }
 

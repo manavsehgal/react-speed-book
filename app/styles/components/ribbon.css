@@ -12,6 +12,7 @@
 
 .ribbon__text--active {
   @extend .ribbon__text;
+
   text-decoration: underline;
 }
 

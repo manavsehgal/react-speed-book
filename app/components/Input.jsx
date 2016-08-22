@@ -11,6 +11,7 @@ const Input = (props) => (
 );
 
 Input.propTypes = {
+  className: React.PropTypes.string,
   children: React.PropTypes.node
 };
 

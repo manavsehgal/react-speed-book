@@ -20,7 +20,7 @@ const AboutForms = () => (
         <InputField placeholder="Placeholder for name" />
       </Input>
       <Input>
-        <InputLabel label="Street"/>
+        <InputLabel label="Street" />
         <InputField placeholder="Enter street address" />
       </Input>
       <Input>

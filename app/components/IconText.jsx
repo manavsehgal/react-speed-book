@@ -18,31 +18,33 @@ const IconText = (props) => {
   let renderIcon = null;
 
   if (slim) {
-    renderIcon =
+    renderIcon = (
       <div {...rest}>
-        <i className={iconClass}></i> {text}
-      </div>;
+        <i className={iconClass} /> {text}
+      </div>);
   }
 
   if (ribbon) {
-    renderIcon =
-      <div {...rest} className=
-        {`${props.className} ribbon__menu text--center`}>
-          <i className={iconClass}></i>
-          <p className={active
-              ? 'ribbon__text--active'
-              : 'ribbon__text'}>
-                {text}
-          </p>
-      </div>;
+    renderIcon = (
+      <div {...rest}
+        className={`${props.className} ribbon__menu text--center`}>
+        <i className={iconClass} />
+        <p className={active
+            ? 'ribbon__text--active'
+            : 'ribbon__text'}>
+              {text}
+        </p>
+      </div>
+    );
   }
 
   if (!slim && !ribbon) {
-    renderIcon =
+    renderIcon = (
       <div {...rest}>
-        <i className={iconClass}></i>
+        <i className={iconClass} />
         <h1>{text}</h1>
-      </div>;
+      </div>
+    );
   }
 
   return (renderIcon);

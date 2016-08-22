@@ -3,12 +3,13 @@ import React from 'react';
 const InputLabel = (props) => {
   let renderLabel = null;
   if (props.icon && props.label) {
-    renderLabel =
+    renderLabel = (
       <span>
         <span className={`fa fa-${props.icon}`} />
         &nbsp;
         {props.label}
-      </span>;
+      </span>
+    );
   }
 
   if (!props.icon && props.label) {
@@ -30,9 +31,10 @@ const InputLabel = (props) => {
       {renderLabel}
     </span>
   );
-}
+};
 
 InputLabel.propTypes = {
+  className: React.PropTypes.string,
   label: React.PropTypes.string,
   icon: React.PropTypes.string
 };

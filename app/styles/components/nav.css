@@ -24,10 +24,12 @@
 
 .nav__link--active {
   @extend .nav__link;
+
   text-decoration: underline;
 }
 
 .nav__brand {
   @extend .nav__link;
+
   font-weight: bold;
 }

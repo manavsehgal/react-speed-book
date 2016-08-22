@@ -1,4 +1,4 @@
-import React, { PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
 import Hello from './Hello';
 import Input from './Input';
 import InputLabel from './InputLabel';

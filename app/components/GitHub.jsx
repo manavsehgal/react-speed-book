@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import IconText from './IconText';
 
 export default class GitHub extends React.Component {
@@ -6,8 +6,8 @@ export default class GitHub extends React.Component {
     repo: PropTypes.string.isRequired
   }
 
-  constructor (props) {
-    super (props);
+  constructor(props) {
+    super(props);
     this.state = {
       full_name: '',
       stargazers_count: 0,
@@ -19,13 +19,13 @@ export default class GitHub extends React.Component {
     const sourceRepo =
       `https://api.github.com/repos/${this.props.repo}`;
 
-    this.serverRequest = $.get(sourceRepo, function (result) {
+    this.serverRequest = $.get(sourceRepo, (result) => (
       this.setState({
         full_name: result.full_name,
         stargazers_count: result.stargazers_count,
         open_issues: result.open_issues
-      });
-    }.bind(this));
+      })
+    ));
   }
 
   componentWillUnmount() {
@@ -48,4 +48,4 @@ export default class GitHub extends React.Component {
         : <p>Loading Live Stats...</p>
     );
   }
-};
+}

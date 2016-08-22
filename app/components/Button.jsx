@@ -3,7 +3,7 @@ import React from 'react';
 const Button = (props) => {
   const renderLabel = props.icon
     ? <span>
-        <i className={`fa fa-${props.icon}`}></i>
+        <i className={`fa fa-${props.icon}`} />
         &nbsp;
         {props.label}
       </span>
@@ -23,9 +23,10 @@ const Button = (props) => {
       {renderLabel}
     </button>
   );
-}
+};
 
 Button.propTypes = {
+  className: React.PropTypes.string,
   label: React.PropTypes.string,
   icon: React.PropTypes.string,
   size: React.PropTypes.string,

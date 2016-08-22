@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+
 import Landing from './components/Landing.jsx';
 import AboutBook from './components/AboutBook';
 import AboutCharts from './components/AboutCharts';
@@ -11,9 +13,6 @@ import AboutAjax from './components/AboutAjax';
 import AboutInfographics from './components/AboutInfographics';
 import AboutEmbeds from './components/AboutEmbeds';
 import MissingRoute from './components/MissingRoute';
-
-import { Router, Route,
-  IndexRoute, browserHistory } from 'react-router';
 
 const routeConfig = (
   <Route path="/" component={Landing}>

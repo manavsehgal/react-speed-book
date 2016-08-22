@@ -9,8 +9,7 @@ const YouTube = ({ videoid }) => (
     rel=0&amp;controls=0&amp;showinfo=0`}
     frameBorder="0"
     allowFullScreen
-  >
-  </iframe>
+  />
 );
 
 YouTube.propTypes

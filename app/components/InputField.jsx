@@ -11,6 +11,7 @@ const InputField = (props) => (
 );
 
 InputField.propTypes = {
+  className: React.PropTypes.string,
   placeholder: React.PropTypes.string
 };
 

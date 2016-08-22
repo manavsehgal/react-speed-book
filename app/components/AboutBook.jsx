@@ -6,8 +6,8 @@ const AboutBook = () => (
     <Card plain className="text--center">
       <a href="https://leanpub.com/reactspeedcoding"
         className="image__link">
-        <img width="200"
-          src="img/reactspeed-cover-leanpub.jpg" />
+          <img width="200" role="presentation"
+            src="img/reactspeed-cover-leanpub.jpg" />
       </a>
     </Card>
     <Card plain className="col--half text--center">
