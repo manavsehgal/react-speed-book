@@ -4,10 +4,9 @@ const InputLabel = (props) => {
   let renderLabel = null;
   if (props.icon && props.label) {
     renderLabel = (
-      <span>
+      <span className="text--nowrap">
         <span className={`fa fa-${props.icon}`} />
-        &nbsp;
-        {props.label}
+        <span> {props.label}</span>
       </span>
     );
   }
