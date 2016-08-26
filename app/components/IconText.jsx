@@ -52,7 +52,7 @@ const IconText = (props) => {
 
 IconText.propTypes = {
   icon: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   className: PropTypes.string,
   size: PropTypes.oneOf(['lg', '2x', '3x', '4x', '5x', '']),
   rotate: PropTypes.number,
@@ -63,6 +63,7 @@ IconText.propTypes = {
 };
 
 IconText.defaultProps = {
+  text: '',
   className: '',
   size: '',
   rotate: null,

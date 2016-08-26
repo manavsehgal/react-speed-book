@@ -20,6 +20,8 @@
 }
 
 /* Column grid */
+.col--twentieth { flex: 0 0 5%; }
+.col--tenth { flex: 0 0 10%; }
 .col--fifth { flex: 0 0 20%; }
 .col--quarter { flex: 0 0 25%; }
 .col--one-third { flex: 0 0 33.3333%; }

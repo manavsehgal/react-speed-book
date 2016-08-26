@@ -1,0 +1,19 @@
+.feature__list,
+.roadmap {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+}
+
+.roadmap__navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.feature {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  border-top: 1px solid lightgrey;
+}

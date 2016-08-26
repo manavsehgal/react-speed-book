@@ -13,10 +13,12 @@ import AboutAjax from './components/AboutAjax';
 import AboutInfographics from './components/AboutInfographics';
 import AboutEmbeds from './components/AboutEmbeds';
 import MissingRoute from './components/MissingRoute';
+import Roadmap from './components/Roadmap';
 
 const routeConfig = (
   <Route path="/" component={Landing}>
     <IndexRoute component={AboutCharts} />
+    <Route path="/roadmap" component={Roadmap} />
     <Route path="/book" component={AboutBook} />
     <Route path="/charts" component={AboutCharts} />
     <Route path="/embeds" component={AboutEmbeds} />
