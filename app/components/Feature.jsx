@@ -4,7 +4,7 @@ import IconText from './IconText.jsx';
 import { Categories } from '../actions/roadmap';
 
 const Feature = ({ onClickLikes, title, about,
-  category, likes }) => {
+  category, likes, link }) => {
   let renderCategory = '';
   switch (category) {
   case Categories.COMPONENT:
@@ -48,7 +48,7 @@ const Feature = ({ onClickLikes, title, about,
       </Card>
       <Card plain className="col--half">
         <div className="feature__detail">
-          <b>{title}</b><br />
+          <a href={link}>{title}</a><br /><br />
           <small>{about}</small>
         </div>
       </Card>
@@ -64,7 +64,8 @@ Feature.propTypes = {
   title: PropTypes.string.isRequired,
   about: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  likes: PropTypes.number.isRequired
+  likes: PropTypes.number.isRequired,
+  link: PropTypes.string.isRequired
 };
 
 export default Feature;

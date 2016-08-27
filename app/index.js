@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Provider } from 'react-redux';
 
 import Landing from './components/Landing.jsx';
 import AboutBook from './components/AboutBook';
@@ -15,9 +16,14 @@ import AboutEmbeds from './components/AboutEmbeds';
 import MissingRoute from './components/MissingRoute';
 import Roadmap from './components/Roadmap';
 
+import store from './store/roadmap';
+import roadmapHydrate from './fixtures/roadmap/hydrate';
+
+roadmapHydrate();
+
 const routeConfig = (
   <Route path="/" component={Landing}>
-    <IndexRoute component={AboutCharts} />
+    <IndexRoute component={Roadmap} />
     <Route path="/roadmap" component={Roadmap} />
     <Route path="/book" component={AboutBook} />
     <Route path="/charts" component={AboutCharts} />
@@ -34,6 +40,8 @@ const routeConfig = (
 );
 
 ReactDOM.render(
-  <Router history={browserHistory} routes={routeConfig} />,
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routeConfig} />
+  </Provider>,
   document.getElementById('app')
 );

@@ -1,17 +1,13 @@
 import React from 'react';
 
 import Card from './Card.jsx';
-import Button from './Button';
-import Input from './Input';
-import InputLabel from './InputLabel';
-import InputField from './InputField';
-import FeatureList from './FeatureList';
-import features from '../fixtures/roadmap/features';
+import SearchFeature from './SearchFeature';
 
-const likesClick = (id) => {
-  // to be implemented
-  console.log(`likesClick id = ${id}`);
-};
+import VisibleFeatureList from './VisibleFeatureList';
+import FilterCategoryButton from './FilterCategoryButton';
+import { CategoryFilters } from '../actions/roadmap';
+
+
 const Roadmap = () => (
   <div className="roadmap">
     <Card plain>
@@ -19,24 +15,16 @@ const Roadmap = () => (
     </Card>
     <div className="roadmap__navigation">
       <Card plain className="col--half">
-        <Input className="roadmap__search">
-          <InputLabel label="Search" />
-          <InputField placeholder="Enter feature name" />
-        </Input>
+        <SearchFeature />
       </Card>
       <Card plain>
-        <Button className="roadmap__category"
-          label="Component" color="default" icon="cubes" />
-        <Button className="roadmap__category"
-          label="App" color="primary" icon="cloud" />
-        <Button className="roadmap__category"
-          label="Chapter" color="secondary" icon="book" />
+        <FilterCategoryButton filter={CategoryFilters.SHOW_ALL} />
+        <FilterCategoryButton filter={CategoryFilters.SHOW_APPS} />
+        <FilterCategoryButton filter={CategoryFilters.SHOW_CHAPTERS} />
+        <FilterCategoryButton filter={CategoryFilters.SHOW_COMPONENTS} />
       </Card>
     </div>
-    <FeatureList
-      features={features}
-      onClickLikes={likesClick}
-    />
+    <VisibleFeatureList />
   </div>
 );
 

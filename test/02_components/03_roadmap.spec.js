@@ -2,7 +2,12 @@ import React from 'react';
 import { describe, it } from 'mocha';
 import { expect } from 'chai';
 import { shallow, render } from 'enzyme';
+import { Provider } from 'react-redux';
 import Roadmap from '../../app/components/Roadmap';
+import store from '../../app/store/roadmap';
+import roadmapHydrate from '../../app/fixtures/roadmap/hydrate';
+
+roadmapHydrate();
 
 describe('<Roadmap />', () => {
   it('should create one .roadmap component', () => {
@@ -15,7 +20,7 @@ describe('<Roadmap />', () => {
 
     describe('roadmap__search', () => {
       it('should create one .roadmap__search component', () => {
-        const wrapper = render(<Roadmap />);
+        const wrapper = render(<Provider store={store}><Roadmap /></Provider>);
         expect(wrapper.find('.roadmap__search')).to.have.length(1);
       });
       it('should initialize default value for searchText');
@@ -24,9 +29,9 @@ describe('<Roadmap />', () => {
     });
 
     describe('roadmap__category', () => {
-      it('should create 3 .roadmap__category components', () => {
-        const wrapper = render(<Roadmap />);
-        expect(wrapper.find('.roadmap__category')).to.have.length(3);
+      it('should create 4 .roadmap__category components', () => {
+        const wrapper = render(<Provider store={store}><Roadmap /></Provider>);
+        expect(wrapper.find('.roadmap__category')).to.have.length(4);
       });
       it('should execute selectFilter() when user selects a filter');
       it('should update state tree after selectFilter() is called');
@@ -35,34 +40,8 @@ describe('<Roadmap />', () => {
 
   describe('feature__list', () => {
     it('should create one .feature__list component', () => {
-      const wrapper = render(<Roadmap />);
+      const wrapper = render(<Provider store={store}><Roadmap /></Provider>);
       expect(wrapper.find('.feature__list')).to.have.length(1);
-    });
-    describe('feature', () => {
-      it('should create N .feature components', () => {
-        const wrapper = render(<Roadmap />);
-        expect(wrapper.find('.feature')).to.have.length.above(1);
-      });
-      describe('feature__likes', () => {
-        it('should create N .feature__likes components', () => {
-          const wrapper = render(<Roadmap />);
-          expect(wrapper.find('.feature__likes')).to.have.length.above(1);
-        });
-      });
-
-      describe('feature__detail', () => {
-        it('should create N .feature__detail components', () => {
-          const wrapper = render(<Roadmap />);
-          expect(wrapper.find('.feature__detail')).to.have.length.above(1);
-        });
-      });
-
-      describe('feature__category', () => {
-        it('should create N .feature__category components', () => {
-          const wrapper = render(<Roadmap />);
-          expect(wrapper.find('.feature__category')).to.have.length.above(1);
-        });
-      });
     });
   });
 });

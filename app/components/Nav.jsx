@@ -5,6 +5,7 @@ const Nav = () => (
   <nav className="nav">
     <NavLink to="/" brand>ReactSpeed</NavLink>
     <NavLink to="/book">Book</NavLink>
+    <NavLink to="/roadmap">Roadmap</NavLink>
     <NavLink
       href="https://github.com/manavsehgal/react-speed-book">
         Code
