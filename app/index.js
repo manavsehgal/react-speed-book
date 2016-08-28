@@ -18,9 +18,9 @@ import Roadmap from './components/Roadmap';
 
 import store from './store/roadmap';
 import roadmapHydrate from './fixtures/roadmap/hydrate';
+import rsdb from './fixtures/rsdb.js';
 
 roadmapHydrate();
-
 const routeConfig = (
   <Route path="/" component={Landing}>
     <IndexRoute component={Roadmap} />
@@ -30,7 +30,9 @@ const routeConfig = (
     <Route path="/embeds" component={AboutEmbeds} />
     <Route path="/forms" component={AboutForms} />
     <Route path="/custom" component={AboutCustom} />
-    <Route path="/workflow" component={AboutWorkflow} />
+    <Route path="/workflow"
+      rsdb={rsdb}
+      component={AboutWorkflow} />
     <Route path="/buttons" component={AboutButtons} />
     <Route path="/ajax" component={AboutAjax} />
     <Route path="/infographics"

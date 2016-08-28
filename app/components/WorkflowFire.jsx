@@ -1,28 +1,53 @@
 import React, { PropTypes } from 'react';
 
-const steps = require('../fixtures/workflow/steps.json');
-
-export default class Workflow extends React.Component {
+export default class WorkflowFire extends React.Component {
   static propTypes = {
-    steps: PropTypes.array.isRequired
+    steps: PropTypes.object.isRequired,
+    rsdb: PropTypes.object.isRequired,
+    realtime: PropTypes.bool,
+    stepChange: PropTypes.func
   }
-  static defaultProps = { steps: Object.values(steps) }
+  static defaultProps = { realtime: false }
   constructor(props) {
     super(props);
-    this.state = { stepsIndex: 0 };
+    this.state = {
+      stepsIndex: 0,
+      steps: Object.values(this.props.steps),
+      firebase: false,
+      stepsCount: Object.values(this.props.steps).length };
     this.cycleSequence = this.cycleSequence.bind(this);
     this.cycleScenario = this.cycleScenario.bind(this);
   }
+  componentDidMount() {
+    const getSteps = (snap) => {
+      this.setState({
+        steps: snap.val(),
+        firebase: true,
+        stepsCount: snap.numChildren()
+      });
+    };
+    if (this.props.realtime) {
+      this.props.rsdb.ref('steps').on('value', getSteps);
+    } else {
+      this.props.rsdb.ref('steps').once('value').then(getSteps);
+    }
+  }
   cycleSequence() {
     const nextIndex =
-      this.state.stepsIndex === (this.props.steps.length - 1)
+      this.state.stepsIndex === (this.state.steps.length - 1)
       ? 0
       : this.state.stepsIndex + 1;
+
+    if (this.props.stepChange) {
+      const stepsList = this.state.steps;
+      const nextStep = stepsList[nextIndex];
+      this.props.stepChange(nextStep.workflow, nextStep.strategy, nextStep.sequence);
+    }
 
     this.setState({ stepsIndex: nextIndex });
   }
   cycleScenario() {
-    const stepsList = this.props.steps;
+    const stepsList = this.state.steps;
     const currentStep = stepsList[this.state.stepsIndex];
     let stepsCount = 0;
     for (let i = 0; i < stepsList.length; ++i) {
@@ -35,15 +60,19 @@ export default class Workflow extends React.Component {
       : this.state.stepsIndex + 1;
     for (let i = loopStart; i < stepsList.length; ++i) {
       if (stepsList[i].strategy !== currentScenario) {
+        if (this.props.stepChange) {
+          const nextStep = stepsList[i];
+          this.props.stepChange(nextStep.workflow, nextStep.strategy, nextStep.sequence);
+        }
+
         this.setState({ stepsIndex: i });
         break;
       }
     }
   }
   render() {
-    const stepsList = this.props.steps;
+    const stepsList = this.state.steps;
     const currentStep = stepsList[this.state.stepsIndex];
-
     return (
       <div className="workflow">
         <div className="workflow__scenario">
@@ -66,7 +95,15 @@ export default class Workflow extends React.Component {
             {currentStep.sequence}
           </div>
         </div>
+        <br />
+        <div className="text--center">
+          <small>
+            Data Source: {this.state.firebase ? 'Firebase' : 'Local'}
+            &nbsp;| Steps count: {this.state.stepsCount}
+          </small>
+        </div>
       </div>
+
     );
   }
 }
