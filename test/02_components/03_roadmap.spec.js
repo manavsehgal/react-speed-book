@@ -23,9 +23,6 @@ describe('<Roadmap />', () => {
         const wrapper = render(<Provider store={store}><Roadmap /></Provider>);
         expect(wrapper.find('.roadmap__search')).to.have.length(1);
       });
-      it('should initialize default value for searchText');
-      it('should execute enterSearch() when user presses Enter in search box');
-      it('should update state tree after enterSearch() is called');
     });
 
     describe('roadmap__category', () => {
@@ -33,8 +30,6 @@ describe('<Roadmap />', () => {
         const wrapper = render(<Provider store={store}><Roadmap /></Provider>);
         expect(wrapper.find('.roadmap__category')).to.have.length(4);
       });
-      it('should execute selectFilter() when user selects a filter');
-      it('should update state tree after selectFilter() is called');
     });
   });
 
