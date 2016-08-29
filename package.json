@@ -14,7 +14,8 @@
     "elinttable": "eslint . --ext .js --ext .jsx --cache --format table || true",
     "elintsummary": "eslint . --ext .js --ext .jsx --cache --format 'node_modules/eslint-friendly-formatter' || true",
     "slint": "stylelint ./app/styles/**/*.css ./app/style.css --syntax scss || true",
-    "profile": "NODE_ENV=production webpack --config webpack.prod.config.js --profile --json > profile.json"
+    "profile": "NODE_ENV=production webpack --config webpack.prod.config.js --profile --json > profile.json",
+    "storybook": "start-storybook -p 9001 -s ./app/public"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "rumble-charts": "^1.0.12"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.5.2",
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.13.2",
     "babel-eslint": "^6.1.2",
