@@ -23,7 +23,7 @@ a {
 
 a:focus,
 a:hover {
-  border-bottom: 1px solid steelblue;
+  border-bottom: 1px solid $primary;
   cursor: pointer;
 }
 
